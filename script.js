@@ -2,7 +2,7 @@ const btn = document.querySelector("button");
 
 const footer = document.querySelector("footer");
 
-function conversionT(valueCoin, conversionCoin) {
+function conversionCoin(valueCoin, conversionCoin) {
     switch (conversionCoin) {
         case "USD":
             arrayCoin = [5.41, valueCoin * 5.41, "US$ "]
@@ -23,7 +23,7 @@ btn.addEventListener("click", () => {
 
         let conversion = document.querySelector("select").value;
 
-        let precos = conversionT(valor, conversion);
+        let precos = conversionCoin(valor, conversion);
 
         if (conversion != "" && valor != "" && !isNaN(precos[1])) {
             footer.style.display = "block";
